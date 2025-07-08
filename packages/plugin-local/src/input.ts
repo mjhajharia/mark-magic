@@ -38,10 +38,10 @@ export async function scan(options: LocalInputConfig): Promise<ScanContent[]> {
       onlyFiles: true,
       ignore: options.ignore ?? [],
     })
-  ).map((item) => ({
-    id: hashString(item).toString(),
-    name: pathe.basename(item, '.md'),
-    relPath: item,
+  ).map((it) => ({
+    id: hashString(it).toString(),
+    name: pathe.basename(it, '.md'),
+    relPath: it,
   }))
 }
 

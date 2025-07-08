@@ -4,7 +4,7 @@ import { fromAsync } from '@mark-magic/utils'
 import { flatMap, last } from 'lodash-es'
 import { convert } from '@mark-magic/core'
 import { fromMarkdown, select } from '@liuli-util/markdown-util'
-import { config, noteApi, searchApi, tagApi } from 'joplin-api'
+import { joplinDataApi } from 'joplin-api'
 import * as local from '@mark-magic/plugin-local'
 import { initTempPath } from '@liuli-util/test'
 
@@ -21,11 +21,15 @@ it('internal link for note and resource', async () => {
   expect(r.trim()).eq('[test](:/content/test) ![image](:/resource/image) [github](https://github.com)')
 })
 
+let api: ReturnType<typeof joplinDataApi>
 describe.skip('input', () => {
   const tempPath = initTempPath(__filename)
   beforeAll(() => {
-    config.token = import.meta.env.VITE_JOPLIN_TOKEN
-    config.baseUrl = import.meta.env.VITE_JOPLIN_BASE_URL
+    api = joplinDataApi({
+      token: import.meta.env.VITE_JOPLIN_TOKEN,
+      baseUrl: import.meta.env.VITE_JOPLIN_BASE_URL,
+      type: 'rest',
+    })
   })
   it('convert to local', async () => {
     await convert({
@@ -64,17 +68,17 @@ describe.skip('input', () => {
 
   describe('Should content include title set context', () => {
     beforeAll(async () => {
-      if ((await searchApi.search({ query: 'test title in plugin-joplin tag:blog' })).items.length > 0) {
+      if ((await api.search.search({ query: 'test title in plugin-joplin tag:blog' })).items.length > 0) {
         return
       }
       const createNoteId = (
-        await noteApi.create({
+        await api.note.create({
           title: 'test title in plugin-joplin',
           body: 'test body',
         })
       ).id
-      const blogTagId = (await tagApi.list()).items.find((it) => it.title === 'blog')!.id
-      await tagApi.addTagByNoteId(blogTagId, createNoteId)
+      const blogTagId = (await api.tag.list()).items.find((it) => it.title === 'blog')!.id
+      await api.tag.addTagByNoteId(blogTagId, createNoteId)
     })
     it('Should content include title', async () => {
       const list = await fromAsync(
