@@ -37,9 +37,9 @@
     "lru-cache": "^10.1.0",
     "nanoid": "^5.0.4",
     "pathe": "^1.1.1",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.10",
-    "vite-node": "^1.0.4",
-    "vitest": "^1.0.4"
+    "typescript": "^5.8.3",
+    "vite": "^7.0.2",
+    "vite-node": "^3.2.4",
+    "vitest": "^3.2.4"
   }
 }

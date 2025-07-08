@@ -18,9 +18,9 @@
   "devDependencies": {
     "@liuli-util/vite-plugin-node": "^0.8.1",
     "@types/node": "^20.3.1",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.9",
-    "vitest": "^1.0.4"
+    "typescript": "^5.8.3",
+    "vite": "^7.0.2",
+    "vitest": "^3.2.4"
   },
   "publishConfig": {
     "access": "public",

@@ -21,9 +21,9 @@
   "devDependencies": {
     "@liuli-util/vite-plugin-node": "^0.8.1",
     "@types/lodash-es": "^4.17.12",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.10",
-    "vitest": "^1.0.4"
+    "typescript": "^5.8.3",
+    "vite": "^7.0.2",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@mark-magic/core": "workspace:^",
