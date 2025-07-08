@@ -28,7 +28,7 @@
     "@mark-magic/plugin-local": "workspace:^",
     "@types/fs-extra": "^11.0.1",
     "@types/lodash-es": "^4.17.12",
-    "@types/node": "^18.8.3",
+    "@types/node": "^24.0.10",
     "@types/uuid": "^9.0.8",
     "dotenv": "^16.3.1",
     "typescript": "^5.8.3",

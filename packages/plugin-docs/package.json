@@ -30,7 +30,7 @@
     "@types/markdown-it": "^13.0.7",
     "@types/markdown-it-footnote": "^3.0.4",
     "@types/mustache": "^4.2.2",
-    "@types/node": "^20.10.4",
+    "@types/node": "^24.0.10",
     "esbuild": "^0.18.7",
     "json-schema-to-typescript": "^13.0.2",
     "markdown-it": "^14.1.0",

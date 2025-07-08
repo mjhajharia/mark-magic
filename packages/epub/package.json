@@ -23,7 +23,7 @@
     "@liuli-util/vite-plugin-node": "^0.8.1",
     "@types/mime-types": "^2.1.1",
     "@types/mustache": "^4.2.2",
-    "@types/node": "^20.3.1",
+    "@types/node": "^24.0.10",
     "@types/uuid": "^9.0.2",
     "extract-zip": "^2.0.1",
     "typescript": "^5.8.3",

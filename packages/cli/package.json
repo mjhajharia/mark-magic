@@ -43,7 +43,7 @@
     "@mark-magic/utils": "workspace:^",
     "@types/fs-extra": "^11.0.1",
     "@types/lodash-es": "^4.17.7",
-    "@types/node": "^20.1.4",
+    "@types/node": "^24.0.10",
     "json-schema-to-typescript": "^13.0.2",
     "typescript": "^5.8.3",
     "vite": "^7.0.2",
