@@ -1,5 +1,11 @@
 # @mark-magic/epub
 
+## 0.4.0
+
+### Minor Changes
+
+- update @liuli-util/markdown-util, support math expression
+
 ## 0.3.0
 
 ### Minor Changes

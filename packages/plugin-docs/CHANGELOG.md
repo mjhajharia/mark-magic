@@ -1,5 +1,20 @@
 # @mark-magic/plugin-docs
 
+## 0.22.0
+
+### Minor Changes
+
+- update @liuli-util/markdown-util, support math expression
+
+### Patch Changes
+
+- Updated dependencies
+  - @mark-magic/core@0.22.0
+  - markdown-it-cjk-space-clean@0.3.0
+  - @mark-magic/plugin-local@0.22.0
+  - @mark-magic/utils@0.22.0
+  - vitepress-plugin-twitter-card@0.2.0
+
 ## 0.20.0
 
 ### Minor Changes

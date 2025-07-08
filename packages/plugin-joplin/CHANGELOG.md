@@ -1,5 +1,11 @@
 # @mark-magic/plugin-joplin
 
+## 0.22.0
+
+### Minor Changes
+
+- update @liuli-util/markdown-util, support math expression
+
 ## 0.21.0
 
 ### Minor Changes

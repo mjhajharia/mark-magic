@@ -1,5 +1,11 @@
 # @mark-magic/create-plugin
 
+## 0.22.0
+
+### Minor Changes
+
+- update @liuli-util/markdown-util, support math expression
+
 ## 0.12.0
 
 ### Minor Changes

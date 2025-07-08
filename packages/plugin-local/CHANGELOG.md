@@ -1,5 +1,17 @@
 # @mark-magic/plugin-local
 
+## 0.22.0
+
+### Minor Changes
+
+- update @liuli-util/markdown-util, support math expression
+
+### Patch Changes
+
+- Updated dependencies
+  - @mark-magic/core@0.22.0
+  - @mark-magic/utils@0.22.0
+
 ## 0.19.0
 
 ### Minor Changes

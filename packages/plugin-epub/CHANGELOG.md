@@ -1,5 +1,19 @@
 # @mark-magic/plugin-epub
 
+## 0.22.0
+
+### Minor Changes
+
+- update @liuli-util/markdown-util, support math expression
+
+### Patch Changes
+
+- Updated dependencies
+  - @mark-magic/core@0.22.0
+  - @mark-magic/epub@0.4.0
+  - mdast-util-cjk-space-clean@0.3.0
+  - @mark-magic/utils@0.22.0
+
 ## 0.13.0
 
 ### Minor Changes
