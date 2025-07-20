@@ -7,6 +7,10 @@ interface HugoPostMeta {
   slug: string
   tags: string[]
   date: string
+  author?: string
+  draft?: boolean
+  hasMath?: boolean
+  [key: string]: any // allow extra keys
 }
 
 export function output(options?: { root?: string; base?: string }): OutputPlugin {
@@ -19,9 +23,16 @@ export function output(options?: { root?: string; base?: string }): OutputPlugin
     meta: (note) =>
       ({
         title: note.name,
-        slug: note.id,
-        tags: note.extra.tags,
+        slug: note.slug || note.id,
+        tags: note.extra.tags || [],
         date: new Date(note.created).toISOString(),
+
+        // Add these to match Tufte theme frontmatter requirements:
+        author: note.extra.author || 'Meenal Jhajharia',  // or pull dynamically if possible
+        draft: note.extra.draft ?? false,
+        hasMath: note.extra.hasMath ?? true,
+
+        // Add anything else Tufte theme requires here
       } as HugoPostMeta),
     contentLink: (it) => path.join('/', baseUrl, `/posts/${it.linkContentId}`),
     resourceLink: (it) => path.join('/', baseUrl, `/resources/${it.resource.id}${path.extname(it.resource.name)}`),
